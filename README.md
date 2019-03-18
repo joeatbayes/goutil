@@ -3,11 +3,14 @@ GoLang Libraries used by my various Go Based Systems such as file2consult,  MDS,
 
 Contains libraries that I use across several GOLang based programs and wanted to reduce temptation to copy.
 
-
-
 ## Important Files
 
 
+
+## Known Consumers
+
+- [http stress test](https://github.com/joeatbayes/http-stress-test) - HTTP Test case and HTTP Stress tester.   Reads a JSON based text file that can contain from 1 to millions of test cases and will run them in multi-threaded stress test.  Supports wait merge to allow read after CRUD operations to be properly synchronized.  Also supports checking status codes,  response text and response bodies.  Allows easy specification of  URI, Headers, Post Body, Verb etc.  Written in GO.
+-  
 
 ## Some other repositories:
 
