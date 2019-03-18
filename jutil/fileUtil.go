@@ -1,6 +1,6 @@
 package jutil
 
-// tested with go 1.11.2 some functions not availble in older versions.
+// tested with go 1.11.2 some functions not available in older versions.
 
 import (
 	"bufio"

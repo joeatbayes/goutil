@@ -31,3 +31,4 @@ func Elap(msg string, beg_time float64, end_time float64) float64 {
 	fmt.Printf("ELAP %s = %12.3f ms\n", msg, elap)
 	return elap
 }
+
