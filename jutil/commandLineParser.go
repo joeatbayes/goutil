@@ -243,7 +243,7 @@ var str = "Old Value!"
 var ParmMatch, ParmErr = regexp.Compile("\\{.*?\\}")
 
 func (parg *ParsedCommandArgs) Interpolate(str string) string {
-	fmt.Println("L246: Interpolate atr=", string)
+	fmt.Println("L246: Interpolate atr=", str)
 	ms := ParmMatch.FindAllIndex([]byte(str), -1)
 	if len(ms) < 1 {
 		return str // no match found
