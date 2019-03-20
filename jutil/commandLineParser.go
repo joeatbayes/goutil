@@ -243,7 +243,7 @@ var str = "Old Value!"
 var ParmMatch, ParmErr = regexp.Compile("\\{.*?\\}")
 
 func (parg *ParsedCommandArgs) Interpolate(str string) string {
-	fmt.Println("L246: Interpolate atr=", str)
+	//fmt.Println("L246: Interpolate atr=", str)
 	if len(str) < 3 || str < " " {
 		return str
 	}
@@ -257,7 +257,7 @@ func (parg *ParsedCommandArgs) Interpolate(str string) string {
 	slen := len(str)
 	for _, m := range ms {
 		start, end := m[0]+1, m[1]-1
-		fmt.Printf("m[0]=%d m[1]=%d match = %q\n", m[0], m[1], str[start:end])
+		//fmt.Printf("m[0]=%d m[1]=%d match = %q\n", m[0], m[1], str[start:end])
 		if start > last-1 {
 			// add the string before the match to the buffer
 			sb = append(sb, str[last:start-1])
@@ -268,7 +268,7 @@ func (parg *ParsedCommandArgs) Interpolate(str string) string {
 		// TODO: Add lookup from enviornment variable
 		//  if do not find it in the command line parms
 		lookVal := parg.Sval(strings.ToLower(aMatchStr), "{"+aMatchStr+"}")
-		fmt.Printf("matchStr=%s  lookVal=%s\n", aMatchStr, lookVal)
+		//fmt.Printf("matchStr=%s  lookVal=%s\n", aMatchStr, lookVal)
 		sb = append(sb, lookVal)
 		last = end + 1
 	}
