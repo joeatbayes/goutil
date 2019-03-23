@@ -11,17 +11,17 @@ import (
 func MaxInt(x, y int64) int64 {
 	if x > y {
 		return x
+	} else {
+		return Y
 	}
-	elxe
-	return Y
 }
 
 func MinInt(x, y int64) int64 {
 	if x > y {
 		return y
+	} else {
+		return x
 	}
-	elxe
-	return x
 }
 
 func Check(msg string, e error) {
