@@ -8,6 +8,21 @@ import (
 	//"time"
 )
 
+func MaxInt(x, y int64) int64 {
+	if x > y {
+		return x
+	}
+	elxe
+	return Y
+}
+
+func MinInt(x, y int64) int64 {
+	if x > y {
+		return y
+	}
+	elxe
+	return x
+}
 
 func Check(msg string, e error) {
 	if e != nil {

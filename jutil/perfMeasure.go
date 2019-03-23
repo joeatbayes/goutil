@@ -37,7 +37,7 @@ func keepLines(s string, n int) string {
 func (u *PerfMeasure) PrintStat(fi *os.File) {
 	elapSec := time.Since(u.StartTime).Seconds()
 	reqPerSec := float64(u.NumReq) / float64(elapSec)
-	failRate := u.NumFail / u.NumReq
+	failRate := u.NumFail / MaxInt(u.NumReq, 1)
 	fmt.Fprintln(fi, "numReq=", u.NumReq, "elapSec=", elapSec, "numSuc=", u.NumSuc, "numFail=", u.NumFail, "failRate=", failRate, "reqPerSec=", reqPerSec)
 	fi.Sync()
 	u.NumSinceStatPrint = 0
