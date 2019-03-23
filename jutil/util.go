@@ -12,7 +12,7 @@ func MaxInt(x, y int) int {
 	if x > y {
 		return x
 	} else {
-		return Y
+		return y
 	}
 }
 
