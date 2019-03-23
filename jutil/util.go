@@ -8,7 +8,7 @@ import (
 	//"time"
 )
 
-func MaxInt(x, y int64) int64 {
+func MaxInt(x, y int) int {
 	if x > y {
 		return x
 	} else {
@@ -16,7 +16,7 @@ func MaxInt(x, y int64) int64 {
 	}
 }
 
-func MinInt(x, y int64) int64 {
+func MinInt(x, y int) int {
 	if x > y {
 		return y
 	} else {
