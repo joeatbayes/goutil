@@ -183,10 +183,11 @@ func (parg *ParsedCommandArgs) Fval(name string, defaultVal float32) float32 {
 // if not found.
 func (parg *ParsedCommandArgs) F64val(name string, defaultVal float64) float64 {
 	val, found := parg.NamedStr[name]
+	fmt.Printf("name=", name, " val=", val, " found=", found)
 	if found {
 		val = s.TrimSpace(val)
 		f64, err := strconv.ParseFloat(val, 64)
-		fmt.Printf("\n\n\nF64val ptxt=%s  f64=%v err=%v\n", f64, val, err)
+		fmt.Printf("\n\n\nL189: F64val ptxt=%s  f64=%v err=%v\n", f64, val, err)
 		if err != nil {
 			return defaultVal
 		} else {
