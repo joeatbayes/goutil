@@ -26,6 +26,10 @@ func Nowms() float64 {
 	return float64(nn.UnixNano()) / float64(time.Millisecond)
 }
 
+func CalcElapMs(start float64) float64 {
+	return elap := end_time - beg_time	
+}
+
 func Elap(msg string, beg_time float64, end_time float64) float64 {
 	elap := end_time - beg_time
 	fmt.Printf("ELAP %s = %12.3f ms\n", msg, elap)
