@@ -26,12 +26,12 @@ func Nowms() float64 {
 	return float64(nn.UnixNano()) / float64(time.Millisecond)
 }
 
-func CalcElapMs(start float64) float64 {
-	return end_time - beg_time
+func CalcElapMs(startMs float64) float64 {
+	return Nowms() - startMs
 }
 
-func CalcElapSec(startms) float64 {
-	return CalcElapMs(startms) / 1000.0
+func CalcElapSec(startMs) float64 {
+	return CalcElapMs(startMs) / 1000.0
 }
 
 func Elap(msg string, beg_time float64, end_time float64) float64 {
