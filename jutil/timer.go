@@ -30,7 +30,7 @@ func CalcElapMs(startMs float64) float64 {
 	return Nowms() - startMs
 }
 
-func CalcElapSec(startMs) float64 {
+func CalcElapSec(startMs float64) float64 {
 	return CalcElapMs(startMs) / 1000.0
 }
 
