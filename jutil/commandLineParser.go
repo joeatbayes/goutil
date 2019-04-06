@@ -213,7 +213,7 @@ func (parg *ParsedCommandArgs) Sval(name string, defaultVal string) string {
 // default if not specified.
 func (parg *ParsedCommandArgs) Bval(name string, defaultVal bool) bool {
 	val, found := parg.NamedStr[name]
-	fmt.Printf("Bval name=%s val=%v  found=%v", name, val, found)
+	//fmt.Printf("Bval name=%s val=%v  found=%v", name, val, found)
 	if found {
 		val = s.ToLower(s.TrimSpace(val))
 		if val == "true" || val == "t" || val == "y" || val == "yes" || val == "1" {
