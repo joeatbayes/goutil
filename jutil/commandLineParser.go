@@ -212,10 +212,16 @@ func (parg *ParsedCommandArgs) Sval(name string, defaultVal string) string {
 // return boolean equivelant of parameter value specified or
 // default if not specified.
 func (parg *ParsedCommandArgs) Bval(name string, defaultVal bool) bool {
-	val, found := parg.NamedInt[name]
+	val, found := parg.NamedStr[name]
 	//fmt.Printf("Bval name=%s val=%v  found=%v", name, val, found)
 	if found {
 		return val == 1
+		val = s.ToLower(s.TrimSpace(val))
+		if val == "true" || val == "t" || val == "y" || val == "yes" || val == "1" {
+			return true
+		} else {
+			return defaultVal
+		}
 	} else {
 		return defaultVal
 	}
