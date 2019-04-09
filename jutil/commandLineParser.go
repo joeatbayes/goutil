@@ -87,11 +87,10 @@ func ParseCommandLine(args []string) *ParsedCommandArgs {
 				ptxt := s.TrimSpace(a[1])
 				lctxt := s.ToLower(ptxt)
 				//fmt.Printf("key=%v ptxt=%v\n", key, ptxt)
-				if lctxt == "true" | "yes" | "y" |  "t" | "1" {
-					tout.NamedInt[key] = 1					
-				} else if lctxt == "false" | "no" | "n" | "0" {
+				if lctxt == "true"|"yes"|"y"|"t"|"1" {
+					tout.NamedInt[key] = 1
+				} else if lctxt == "false"|"no"|"n"|"0" {
 					tout.NamedInt[key] = 0
-					tout.NamedStr[key\ = "no"]
 				} else if len(ptxt) < 1 {
 					tout.NamedInt[key] = 0
 				} else {
@@ -213,9 +212,9 @@ func (parg *ParsedCommandArgs) Sval(name string, defaultVal string) string {
 // return boolean equivelant of parameter value specified or
 // default if not specified.
 func (parg *ParsedCommandArgs) Bval(name string, defaultVal bool) bool {
-	val, found := parg.NamedInt[name]	
-	if found {		
-		if val == 1{
+	val, found := parg.NamedInt[name]
+	if found {
+		if val == 1 {
 			return true
 		} else {
 			return false
