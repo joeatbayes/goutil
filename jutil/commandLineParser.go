@@ -87,9 +87,9 @@ func ParseCommandLine(args []string) *ParsedCommandArgs {
 				ptxt := s.TrimSpace(a[1])
 				lctxt := s.ToLower(ptxt)
 				//fmt.Printf("key=%v ptxt=%v\n", key, ptxt)
-				if lctxt == "true"|"yes"|"y"|"t"|"1" {
+				if lctxt == "true"|lctxt == "yes"|lctxt == "y"|lctxt == "t"|lctxt == "1" {
 					tout.NamedInt[key] = 1
-				} else if lctxt == "false"|"no"|"n"|"0" {
+				} else if lctxt == "false"|lctxt == "no"|lctxt == "n"|lctxt == "0" {
 					tout.NamedInt[key] = 0
 				} else if len(ptxt) < 1 {
 					tout.NamedInt[key] = 0
